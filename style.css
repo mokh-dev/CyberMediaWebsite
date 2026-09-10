@@ -16,6 +16,7 @@
   background: none;
 
   scroll-behavior: smooth !important;
+
   font-family: "BaiJamJuree";
 }
 
@@ -26,57 +27,156 @@ main {
   height: 100%;
 
   scroll-behavior: smooth !important;
-}
 
-
-.bg-main {
   background-color: #161616;
 }
 
-.primary-header {
+p, h1, h2 {
+  color: #FFFFFF;
+}
+
+
+
+header {
+  position: absolute;
   display: flex;
   width: 100%;
-
-  margin: 2.5rem;
 }
 
 .header-logo {
   width: 16rem;
+  margin-top: 2rem;
   margin-left: 2rem;
 }
 
-
 .hero-section {
   display: flex;
-  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
 
   height: 100%;
   
-  gap: 12rem;
-  margin-left: 6rem;
-  margin-right: 6rem;
+  gap: 15%;
+  margin-left: 2rem;
+  margin-right: 2rem;
 }
 
 .hero-video-wrapper {
-  min-width: min-content !important;
-  min-height: min-content !important;
+  max-width: 100%;
+  height: auto;
 }
+
+.hero-video {
+  max-width: 100%;
+  height: auto;
+}
+
 
 .hero-text-wrapper {
   display: flex;
   flex-direction: column;
+
+  justify-content: center;
   
   gap: 8rem;
 }
 
 .hero-text-heading-wrapper {
-  font-size: 2.5rem;
-}
-
-.hero-text-heading {
-  color: #FFFFFF;
+  font-size: 2.625rem; 
+  text-wrap: nowrap;
 }
 
 .hero-text-heading-colored {
   color: #C6FF34;
+}
+
+.hero-text-subwrapper {
+  display: flex;
+  flex-direction: column;
+
+  gap: 1.75rem;
+}
+
+.hero-text-body {
+  font-size: 1.75rem;
+}
+
+.hero-text-button {
+  font-size: 1.5rem;
+  font-weight: 600;
+  letter-spacing: 0.125rem;
+
+  width: 11.25rem;
+  height: 3rem;
+
+  color: #FFFFFF;
+  background-color: #7D3BED;
+
+  border-radius: 27.5px;
+}
+
+
+/* Laptop */
+@media (max-width: 1024px) {
+
+  .header-logo {
+    width: 16rem;
+    margin-top: 1.25rem;
+    margin-left: 1.25rem;
+  }
+
+  .hero-section {
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+
+    gap: 2rem;
+  }
+
+  .hero-text-wrapper {
+    gap: 4rem;
+  }
+
+  .hero-text-heading-wrapper {
+    font-size: 1.75rem; 
+    text-wrap: nowrap;
+  }
+}
+
+
+/* MOBILE */
+@media (max-width: 425px) {
+  
+  .header-logo {
+    width: 10rem;
+    margin-top: 1.25rem;
+    margin-left: 1.25rem;
+  }
+
+  .hero-section {
+    display: flex;
+    flex-direction: column;
+
+    justify-content: start;
+    align-items: center;
+
+    gap: 2rem;
+
+    margin-top: 8rem;
+  }
+
+  .hero-text-wrapper {
+    gap: 4rem;
+  }
+
+  .hero-text-heading-wrapper {
+    font-size: 1.25rem; 
+    text-wrap: nowrap;
+  }
+
+  .hero-text-body {
+    font-size: 1.25rem;
+  }
 }
