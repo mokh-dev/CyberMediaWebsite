@@ -187,6 +187,7 @@ header {
 
 /* Games Page */
 
+
 .games-section {
   display: flex;
   width: 100%;
@@ -218,17 +219,63 @@ header {
   border-radius: 3rem;
 }
 
-
 .game-title {
   font-size: 2rem;
   font-weight: 400;
 }
 
 
+/* Desktop */
+@media (min-width: 1024px) {
+    .games-section {
+    display: flex;
+    width: 90%;
+    height:100%;
+    gap: 4rem;
+
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+
+    margin-left: auto;
+    margin-right: auto;
+
+  }
+
+
+  .game-wrapper {
+    display: flex;
+    flex: 1 1 0;
+    min-width: 0;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+    text-decoration: none;
+  }
+
+  .game-image {
+    display: block;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    height: auto;
+    object-fit: cover;
+
+    background: linear-gradient(
+      0deg,
+      rgba(125, 59, 237, 1) 0%,
+      rgba(125, 59, 237, .3) 50%,
+      rgba(0, 0, 0, 0) 100%
+    );
+
+    border-radius: 3rem;
+  }
+}
+
 /* Laptop */
 @media (max-width: 1024px) {
   .games-section {
     height: auto;
+    width: 100%;
 
     margin-top: 10rem;
     margin-bottom: 2rem;
